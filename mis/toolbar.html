@@ -1,0 +1,92 @@
+<!-- Creating a fixed toolbar on top of a page with multiple divisions.-->
+<!doctype html>
+<html>
+<head>
+	<title>Toolbar</title>
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+	body{
+		width:100%;
+		margin:0 auto;
+		background-color:#FFED97;
+	}
+	ul,li{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+		
+	.clear{ } 
+		
+	.empty{height:80px;width:1000px;margin:0 auto;}
+
+	.top-nav{width:100%;position:fixed;left:0;top:0;height:80px;background-color:white;margin:0;padding:0;float:left;min-width:1240px;}
+	.logo{float:left;width:240px;height:80px;background-color:grey}
+	.navs{float:left;position:absolute;left:400px;overflow:hidden;
+		width:1000px;height:80px;}
+		margin:0 auto;background-color:green;}
+	.toolbar{}
+	.navs li{
+		
+		float:left;
+		padding:20px 0;
+	}
+	.navs li a{margin:20px;}
+    </style> 
+	
+</head>
+
+<body>
+<div class="top-nav">
+	<div class="logo">
+		<p>LOGO</p>
+	</div>
+		<div style="width:900px;height:80px;float:left">
+		<ul class="navs">
+		<li>|<a>Home</a></li>
+        <li>|<a>Products</a></li>
+        <li>|<a>Services</a></li>
+        <li>|<a>Careers</a></li>
+        <li>|<a>Contact US</a>|</li>
+	
+</ul>
+</div>
+	<div class="toolbar"style="width:100px;height:80px;background-color:#AD5A5A;float:right;">
+		<p>Log In</p>
+	</div>
+</div>
+<div class="empty"></div>
+<!-- a random list just to show that the tool bar is fixed.-->
+<div align="center">
+	<p>a list of OOP languages:</p>
+	<p>ActionScript 3.0</p>
+	<p>Actor</p>
+	<p>Ada 95 and Ada 2005 (multi-purpose language)</p>
+	<p>BETA</p>
+	<p>Blue</p>
+	<p>C++</p>
+	<p>C#</p>
+	<p>Ceylon</p>
+	<p>Oxygene (formerly known as Chrome)</p>
+	<p>ChucK</p>
+	<p>Cobra</p>
+	<p>ColdFusion</p>
+	<p>Curl</p>
+	<p>D</p>
+	<p>DASL</p>
+	<p>Delphi</p>
+	<p>E</p>
+	<p>GNU E</p>
+	<p>eC</p>
+	<p>Eiffel</p>
+	<p>F-Script</p>
+	<p>Fortran 2003</p>
+	<p>Fortress</p>
+	<p>FPr</p>
+	<p>Gambas</p>
+	</div>
+</body>
+</html>
+
