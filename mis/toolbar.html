@@ -13,7 +13,6 @@
 		background-color:#FFED97;
 	}
 	ul,li{
-		margin:0;
 		padding:0;
 		list-style:none;
 	}
@@ -21,12 +20,11 @@
 	.clear{ } 
 		
 	.empty{height:80px;width:1000px;margin:0 auto;}
-
 	.top-nav{width:100%;position:fixed;left:0;top:0;height:80px;background-color:white;margin:0;padding:0;float:left;min-width:1240px;}
 	.logo{float:left;width:240px;height:80px;background-color:grey}
 	.navs{float:left;position:absolute;left:400px;overflow:hidden;
-		width:1000px;height:80px;}
-		margin:0 auto;background-color:green;}
+		width:900px;height:80px;}
+		margin:0 auto;}
 	.toolbar{}
 	.navs li{
 		
@@ -35,6 +33,31 @@
 	}
 	.navs li a{margin:20px;}
     </style> 
+	<!--use javascript JQuery for all sorts to animation and hacks-->
+	<script src="jquery-3.0.0.min.js"></script>
+	<script type="text/javascript"> 
+	$(document).ready(function(){
+	$("#homedrop").click(function(){
+		$("#homelist").slideToggle("slow");
+	});
+
+	$("#productdrop").click(function(){
+		$("#productlist").slideToggle("slow");
+	});
+	
+	$("#careerdrop").click(function(){
+		$("#careerlist").slideToggle("slow");
+	});
+	
+	$("#contactdrop").click(function(){
+		$("#contactlist").slideToggle("slow");
+	});
+	
+	$("#servicedrop").click(function(){
+		$("#servicelist").slideToggle("slow");
+	});
+	});
+</script>
 	
 </head>
 
@@ -45,18 +68,68 @@
 	</div>
 		<div style="width:900px;height:80px;float:left">
 		<ul class="navs">
-		<li>|<a>Home</a></li>
-        <li>|<a>Products</a></li>
-        <li>|<a>Services</a></li>
-        <li>|<a>Careers</a></li>
-        <li>|<a>Contact US</a>|</li>
+		<li id="homedrop">|<a>Home</a></li>
+        <li id="productdrop">|<a>Products</a></li>
+        <li id="servicedrop">|<a>Services</a></li>
+        <li id="careerdrop">|<a>Careers</a></li>
+        <li id="contactdrop">|<a>Contact US</a>|</li>
 	
 </ul>
 </div>
-	<div class="toolbar"style="width:100px;height:80px;background-color:#AD5A5A;float:right;">
+	<div class="toolbar" style="width:100px;height:80px;background-color:#AD5A5A;float:right;">
 		<p>Log In</p>
 	</div>
 </div>
+
+	<div style="width:500px;height:100px; position:fixed; top:80px;left:400px;">
+	
+			<div  style="float:left;margin:0;padding:0;height:100px;width:82.4px;">
+				<ul id="homelist" style="display:none;margin:0;padding:0;width:82.4px;background-color:white;">
+					<li>Home 1</li>
+					<li>Home 2</li>
+					<li>Home 3</li>
+				</ul>
+			</div>
+		
+		
+			<div style="float:left;margin:0;padding:0;width:99.2167px;height:100px;"><!--product-->
+				<ul id="productlist" style="display:none;margin:0;padding:0;width:99.2167px;background-color:white;">
+					<li>product 1
+					</li>
+					<li>product 2</li>
+					<li>product 3</li>
+				</ul>
+				
+			</div>
+		
+		
+			<div  style="float:left;margin:0;padding:0;width:97.4167px;height:100px;"><!--service-->
+				<ul id="servicelist" style="display:none;margin:0;padding:0;width:97.4167px;background-color:white;">
+					<li>service 1<li>
+					<li>service 2</li>
+					<li>service 3</li>
+				</ul>
+			</div>
+		
+		
+			<div  style="float:left;margin:0;padding:0;width:92.0667px;height:100px;"><!--careers-->
+				<ul id="careerlist" style="display:none;margin:0;padding:0;width:92.0667px;background-color:white;">
+					<li>career 1</li>
+					<li>career 2</li>
+					<li>career 3</li>
+				</ul>
+			</div>
+		
+			<div  style="float:left;margin:0;padding:0;width:120.617px;height:100px;"><!--careers-->
+				<ul id="contactlist" style="display:none;margin:0;padding:0;width:120.617px;background-color:white;">
+					<li>contact 1</li>
+					<li>contact 2</li>
+					<li>contact 3</li>
+				</ul>
+			</div>
+		
+
+	</div>
 <div class="empty"></div>
 <!-- a random list just to show that the tool bar is fixed.-->
 <div align="center">
@@ -89,4 +162,3 @@
 	</div>
 </body>
 </html>
-
